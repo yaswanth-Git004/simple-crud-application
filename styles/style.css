@@ -1,0 +1,264 @@
+:root{
+    --logo-font :"Edwardian Script ITC";
+    --color-primary:rgba(2, 48, 232, 0.99);
+    --black:rgb(24, 24, 24);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    width:100%;
+    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--black);
+    /* background-image: url("https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;*/
+    font-family: "poppins";
+    position: relative;
+    overflow-x: hidden;
+}
+
+.warning-container{
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    padding: .5rem 1rem;
+    border: 1px solid gray;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    animation: slide .5s linear;
+}
+
+.warning-container p{
+    color: black;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(150%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.flex-box{
+    display: flex;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.content-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.content-space{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.full-screen{
+    width: 100%;
+    height: 100%;
+    min-width: inherit;
+    min-height: inherit;
+    /* background-color: red; */
+}
+
+/* -----------------------------------nav css starts from here-------------------------------- */
+
+nav{
+    padding: 18px 5rem;
+    /* background-color: blue; */
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(106, 106, 106);
+}
+
+.logo span{
+    font-size: 30px;
+    color: white;
+    font-family: var(--logo-font);
+}
+
+
+.nav-links{
+    /* border: 1px solid red; */
+    gap: 18px;
+}
+
+.user{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.link , a{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(214, 214, 214);
+}
+
+.link{
+     padding: 3px 10px;
+    padding-bottom: 4px;
+    background-color: rgb(55, 55, 240);
+    border-radius: 3px;
+}
+
+.link:hover{
+    background-color: var(--color-primary);
+}
+
+/* ---------------------------nav css ends here ---------------------------------------------- */
+
+/* --------------------------- form css starts here -------------------------- */
+
+form{
+    width: 500px;
+    gap: 10px;
+    border: 3px solid rgb(132, 132, 132);
+    border-radius: 5px;
+    padding: 3rem;
+    /* background-color: rgba(59, 59, 59, 0.274); */
+    /* backdrop-filter: blur(5px);
+    background-color: rgba(128, 128, 128, 0.248); */
+}
+
+.form-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+input, textarea{
+    padding: .7rem .8rem;
+    outline: none;
+    border: none;
+    background-color: rgba(170, 170, 170, 0.267);
+    font-size: 16px;
+    margin-bottom: .5rem ;
+    color: rgb(221, 221, 221);
+    border-radius: 5px;
+}
+
+input::placeholder , textarea::placeholder{
+    color: rgb(170, 170, 170);
+}
+
+textarea{
+    font-family: "poppins";
+}
+
+form div a{
+    font-size: 15px;
+}
+
+form div a:hover{
+    color: var(--color-primary);
+}
+
+.btn{
+    padding: .6rem;
+    background-color: rgb(55, 55, 247);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--color-primary);
+}
+
+
+/* -------------------------------form css ends here------------------------------ */
+
+/* -------------------------------index css starts from here ------------------------------------- */
+.container{
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.post-container{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    /* background-color: red; */
+    /* padding: .3rem; */
+    border: 1px solid gray;
+    border-radius: 15px;
+    position: relative;
+}
+
+.post-img{
+    width: 100%;
+    /* height: 100%; */
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    background-color: green;
+}
+
+.post-img img{
+    width: 100%;
+    object-fit:cover;
+    height: 100%;
+}
+
+.post-content{
+    padding: 5px;
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    height: 200px;
+    gap: .2rem;
+    /* transform: translateY(35%); 
+    background-color: rgba(0, 0, 0, 0.588);
+    height: 100%;
+    width: 100%;
+    transition-duration: .3s; */
+}
+
+.post-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.post-description{
+    font-size: 14px;
+    color: rgb(187, 187, 187);
+}
+
+/* .post-container:hover .post-content{
+    transform: translateY(50%);
+} */
+
+.post-btns{
+    /* background-color: red; */
+    /* justify-content: end; */
+    gap: .5rem;
+    padding: 0rem 0rem 1rem .5rem;
+}
+
+.post-btns *{
+    width: 80px;
+}
